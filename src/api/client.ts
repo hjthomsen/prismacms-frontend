@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Customer } from "../types";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // or your backend URL
+  baseURL: "http://localhost:5090/api", // or your backend URL
 });
 
 // Customer API functions
