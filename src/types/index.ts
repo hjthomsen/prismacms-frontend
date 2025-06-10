@@ -13,8 +13,15 @@ export interface Customer {
 export interface FinancialStatement {
   id: number;
   customerId: number;
+  customer?: Customer | null; // Populated by API
+  customerName?: string; // For display purposes
   year: number;
-  status: string;
+  status: number; // 0 = Draft, 1 = In Progress, 3 = Completed
+  createdAt?: string;
+  createdBy?: string | null;
+  lastModifiedAt?: string | null;
+  lastModifiedBy?: string | null;
+  assignments?: Assignment[];
 }
 
 export interface Assignment {
